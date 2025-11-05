@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I.S.F.T Nº191</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Estilos Generales --- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f0f4ff;
+      color: #003366;
+    }
+    a { text-decoration: none; }
+
+    /* --- Navbar --- */
+    .navbar-custom {
+      background: linear-gradient(90deg, #00509e, #ff8c42);
+      padding: 15px 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .navbar-brand h3 { color: #fff3e0; font-weight: 700; margin: 0; }
+    .navbar-brand span { color: #fff; font-size: 0.9rem; }
+    .nav-link { color: #fff !important; font-weight: 600; margin-left: 20px; transition: 0.3s; }
+    .nav-link:hover { color: #ffd699 !important; }
+
+    .dropdown-menu { background: #00509e; border-radius: 10px; }
+    .dropdown-item { color: #fff; transition: 0.3s; }
+    .dropdown-item:hover { background-color: #ff8c42; color: #003366; }
+
+    /* --- Hero --- */
+    .hero {
+      position: relative;
+      height: 70vh;
+      background-image: url('/images/Gemini_Generated_Image_3pzunb3pzunb3pzu.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 80, 158, 0.55);
+      border-radius: 15px;
+    }
+    .hero .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 30px;
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 15px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+    .hero .btn-slider {
+      background-color: #ff8c42;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin: 5px;
+      transition: 0.3s;
+    }
+    .hero .btn-slider:hover { background-color: #e6732f; }
+
+    /* --- Conocé Nuestro Instituto --- */
+    .about_section {
+      padding: 80px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about_section .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about_section .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #00509e;
+      margin-bottom: 10px;
+    }
+
+    .about_section .section-subtitle {
+      font-size: 1.1rem;
+      color: #003366;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .about_section .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .about_section .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* --- Noticias / Eventos --- */
+    .event-section {
+      background-color: #e6f2ff;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .event-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+    .event-card {
+      background: linear-gradient(145deg, #ffffff, #cce0ff);
+      border-radius: 18px;
+      overflow: hidden;
+      width: 300px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: 0.3s ease;
+    }
+    .event-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.25); }
+    .event-card img { width: 100%; height: 180px; object-fit: cover; }
+    .event-card .content { padding: 20px; text-align: center; }
+    .event-card h4 { color: #003366; font-weight: 700; margin-bottom: 10px; }
+    .event-card p { color: #00509e; margin-bottom: 15px; font-weight: 500; }
+    .event-card span {
+      display: inline-block;
+      background-color: #ff8c42;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .event-card span:hover { background-color: #e6732f; }
+
+    /* --- Contacto --- */
+    .contact-section {
+      padding: 60px 20px;
+      background-color: #cce0ff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+    }
+    .contact-form input, .contact-form textarea, .contact-form button {
+      margin-bottom: 15px;
+      border-radius: 12px;
+      padding: 12px 20px;
+      width: 100%;
+      border: 1px solid #003366;
+      font-size: 1rem;
+    }
+    .contact-form button { background-color: #ff8c42; color: #fff; border: none; font-weight: 600; transition: 0.3s; }
+    .contact-form button:hover { background-color: #e6732f; }
+
+    /* --- Footer --- */
+    footer { background-color: #003366; color: #fff; text-align: center; padding: 25px 50px; border-radius: 10px 10px 0 0; }
+    footer a { color: #ff8c42; }
+    footer a:hover { color: #ffd699; }
+
+    /* --- Responsive --- */
+    @media (max-width: 768px) {
+      .about_section { padding: 60px 15px; }
+      .about_section .section-title { font-size: 1.8rem; }
+      .about_section .section-subtitle { font-size: 1rem; margin-bottom: 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <a class="navbar-brand" href="index.html">
+    <h3>ISFT Nº191</h3>
+    <span>Nivel Terciario</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="ingresantes.html">Ingresantes</a></li>
+
+      <!-- Dropdown Carreras -->
+      <li class="nav-item dropdown" id="carrerasDropdown">
+        <a class="nav-link dropdown-toggle" href="course.html" id="navbarDropdown" role="button">Carreras</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="gestoria.html">Gestoría</a></li>
+          <li><a class="dropdown-item" href="software.html">Desarrollo de Software</a></li>
+          <li><a class="dropdown-item" href="aduana.html">Régimen Aduanero</a></li>
+          <li><a class="dropdown-item" href="administracion.html">Adm. Contable</a></li>
+          <li><a class="dropdown-item" href="logistica.html">Logística</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="event.html">Noticias</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://isft191.edu.ar/campus/" target="_blank">Campus</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="content">
+      <h1>INSTITUTO SUPERIOR DE FORMACIÓN TÉCNICA N°191</h1>
+      <p>Educación pública de calidad y excelencia académica en Bahía Blanca</p>
+      <a href="course.html" class="btn-slider">Ver Carreras</a>
+      <a href="contact.html" class="btn-slider">Contactanos</a>
+    </div>
+  </header>
+
+  <!-- Conocé Nuestro Instituto -->
+  <section class="about_section">
+    <div class="container">
+      <h2 class="section-title">Conocé Nuestro Instituto</h2>
+      <p class="section-subtitle">
+        Formación técnica de excelencia, docentes capacitados y actividades extracurriculares.
+      </p>
+
+      <div class="video-container">
+        <iframe
+          src="/video/Video Institucional ISFT 191  2022.mp4"
+          title="Video Institucional ISFT Nº191"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Noticias / Eventos -->
+  <!-- Noticias / Eventos -->
+<section id="eventos" class="event-section">
+  <h2 class="mb-5">Noticias y Eventos</h2>
+  <div class="event-container">
+    <div class="event-card">
+      <img src="/images/CONCU.jpg" alt="CAI">
+      <div class="content">
+        <h4>Concurso de Gestoría</h4>
+        <p>La Dirección del Instituto Superior de Formación Técnica N°191 en el marco de la R/M 5886/03 cobertura de cargos de Nivel Superior, se dirige a Ud. para requerirle trámite ante quien corresponda la difusión de llamado a concursos de cátedra correspondiente a las asignaturas mencionadas:
+</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="/images/EXTRA MESA.jpg" alt="Concurso Académico">
+      <div class="content">
+        <h4>Mesas Extraordinarias Diciembre</h4>
+        <p>Pueden descargar las mesas de Diciembre: Régimen, Aduanero, Gestoría, Logística, Admin. Contable y Desarr. de Software, La inscripción la realizan en preceptoría hasta el martes 10/12 inclusive.
+
+</p>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <img src="/images/C.A.I NUEVO.png" alt="Exposición Estudiantil">
+      <div class="content">
+        <h4>Novedades Sobre el CAI</h4>
+        <p>El Consejo Académico Institucional compartió novedades sobre programas, participación estudiantil y mejoras pedagógicas. Entrá para conocer todo lo que se viene.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <a href="event.html" class="btn btn-lg" style="
+      background-color: #ff8c42;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    ">Ver más noticias</a>
+  </div>
+</section>
+
+
+  <!-- Contacto -->
+  <section class="contact-section container my-5">
+    <h2 class="text-center mb-4">Contacto</h2>
+    <form class="contact-form mx-auto" style="max-width:600px;">
+      <input type="text" placeholder="Nombre completo">
+      <input type="email" placeholder="Correo electrónico">
+      <textarea rows="5" placeholder="Mensaje"></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ISFT Nº191 | Todos los derechos reservados</p>
+    <p><a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+  </footer>
+
+<script>
+  // Hace que el menú se abra al pasar el mouse
+  const dropdown = document.querySelector('#carrerasDropdown');
+
+  dropdown.addEventListener('mouseenter', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.add('show');
+    toggle.setAttribute('aria-expanded', 'true');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.remove('show');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+</script>
+
+</body>
+</html>

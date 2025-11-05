@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias - ISFT Nº191</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f0f4ff;
+      color: #003366;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navbar-custom {
+      background: linear-gradient(90deg, #00509e, #ff8c42);
+      padding: 15px 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-brand h3 {
+      color: #fff3e0;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .navbar-brand span {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      margin-left: 20px;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ffd699 !important;
+    }
+
+    .dropdown-menu {
+      background: #00509e;
+      border-radius: 10px;
+    }
+
+    .dropdown-item {
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .dropdown-item:hover {
+      background-color: #ff8c42;
+      color: #003366;
+    }
+
+    /* --- Encabezado Noticias --- */
+    .news-header {
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=60') center/cover no-repeat;
+      height: 45vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      border-radius: 15px;
+      margin: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .news-header h1 {
+      background: rgba(0, 80, 158, 0.75);
+      padding: 20px 40px;
+      border-radius: 15px;
+      font-weight: 700;
+      font-size: 2.8rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* --- Noticias --- */
+    .news-section {
+      padding: 60px 20px;
+      background-color: #e6f2ff;
+      border-radius: 15px;
+      margin: 40px 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-item {
+      background: linear-gradient(145deg, #ffffff, #cce0ff);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .news-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .news-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 25px;
+    }
+
+    .news-content h3 {
+      color: #003366;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .news-content p {
+      color: #00509e;
+      font-weight: 500;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 25px 50px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    footer a {
+      color: #ff8c42;
+      margin: 0 5px;
+    }
+
+    footer a:hover {
+      color: #ffd699;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="index.html">
+      <h3>ISFT Nº191</h3>
+      <span>Nivel Terciario</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="ingresantes.html">Ingresantes</a></li>
+        <li class="nav-item dropdown" id="carrerasDropdown">
+          <a class="nav-link dropdown-toggle" href="course.html" id="navbarDropdown" role="button">Carreras</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="gestoria.html">Gestoría</a></li>
+            <li><a class="dropdown-item" href="software.html">Desarrollo de Software</a></li>
+            <li><a class="dropdown-item" href="aduana.html">Régimen Aduanero</a></li>
+            <li><a class="dropdown-item" href="administracion.html">Adm. Contable</a></li>
+            <li><a class="dropdown-item" href="logistica.html">Logística</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="event.html">Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://isft191.edu.ar/campus/" target="_blank">Campus</a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <div class="news-header">
+    <h1>Noticias del ISFT Nº191</h1>
+  </div>
+
+  <!-- Noticias -->
+  <section class="news-section">
+
+   
+   <div class="news-item">
+  <img src="/images/CONCU.jpg" alt="Jornada de Puertas Abiertas">
+  <div class="news-content">
+    <h3>Concurso de Gestoría</h3>
+    <p>
+      La Dirección del Instituto Superior de Formación Técnica N°191 en el marco de la R/M 5886/03 cobertura de cargos de Nivel Superior,
+      se dirige a Ud. para requerirle trámite ante quien corresponda la difusión de llamado a concursos de cátedra correspondiente a las asignaturas mencionadas:<br><br>
+
+      <strong>TECNICATURA SUPERIOR EN GESTORÍA</strong><br>
+      R.M 4103/03 – Horario de Cursada: lunes a viernes de 14:30 a 18:30 horas<br><br>
+
+      <strong>Asignatura:</strong> GESTIÓN DE ORGANISMOS PROVINCIALES<br>
+      Cuatro módulos provisionales de 3° año<br>
+      Horario: Lunes 16:30 a 18:30 y Jueves 14:30 a 16:30<br><br>
+
+      <strong>DIFUSIÓN:</strong> 12/09/25 al 17/09/25<br>
+      <strong>INSCRIPCIÓN:</strong> 12/09/25 al 18/09/25<br>
+      <strong>RECUSACIONES:</strong> 18/09/25 al 23/09/25<br>
+      <strong>EVALUACIONES:</strong> A partir del 25/09/25
+    </p>
+  </div>
+</div>
+
+
+    <div class="news-item">
+      <img src="/images/MESITA.jpg" alt="Concurso Académico">
+      <div class="news-content">
+        <h3>Mesas Extraordinarias Diciembre</h3>
+        <p> Pueden descargar las mesas de Diciembre: </p>
+        <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://isft191.edu.ar/wp-content/uploads/2025/08/MESAS-EXTRAORDINARIAS-SEP-ADU.pdf">Regimen Aduanero</a><br>
+        <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://isft191.edu.ar/wp-content/uploads/2025/08/MESAS-EXTRAORDINARIAS-SEP-ADU.pdf">Software</a><br>
+        <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://isft191.edu.ar/wp-content/uploads/2025/08/MESAS-EXTRAORDINARIAS-SEP-ADU.pdf">Logistica</a><br>
+        <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://isft191.edu.ar/wp-content/uploads/2025/08/MESAS-EXTRAORDINARIAS-SEP-ADU.pdf">Admin. Contable</a><br>
+        <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://isft191.edu.ar/wp-content/uploads/2025/08/MESAS-EXTRAORDINARIAS-SEP-ADU.pdf">Gestoria</a><br>
+      
+      
+      <p>La inscripción la realizan en preceptoría hasta el martes 10/12 inclusive.</p>
+      
+      </p>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <img src="/images/CAI CH.jpg" alt="Exposición Estudiantil">
+      <div class="news-content">
+        <h3>Novedades Sobre el CAI</h3>
+        <p>El Consejo Académico Institucional (C.A.I.) continúa consolidándose como un espacio clave para el diálogo, la planificación y la toma de decisiones que impactan directamente en la vida académica de nuestra institución. En su última reunión, se abordaron temas fundamentales vinculados al calendario académico, la actualización de programas de estudio, y la incorporación de nuevas propuestas pedagógicas que responden a las necesidades actuales de estudiantes y docentes.
+
+Entre los puntos destacados, se presentó un avance en el diseño de estrategias para fortalecer la vinculación entre los distintos departamentos, promoviendo una mirada integral y colaborativa del quehacer educativo. Además, se discutieron iniciativas para mejorar la participación estudiantil en los procesos de evaluación institucional, reafirmando el compromiso del CAI con una educación democrática y de calidad.
+
+Estas novedades reflejan el trabajo constante del Consejo por construir una comunidad académica más inclusiva, dinámica y comprometida con los desafíos contemporáneos. Invitamos a toda la comunidad educativa a mantenerse informada y participar activamente en las instancias que el CAI propone.</p>
+      </div>
+    </div>
+
+    
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ISFT Nº191 | Todos los derechos reservados</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.querySelector('.nav-link.dropdown-toggle').addEventListener('click', function (e) {
+      window.location.href = 'course.html';
+    });
+
+    const dropdown = document.querySelector('#carrerasDropdown');
+    dropdown.addEventListener('mouseenter', () => {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const toggle = dropdown.querySelector('.nav-link');
+      menu.classList.add('show');
+      toggle.setAttribute('aria-expanded', 'true');
+    });
+    dropdown.addEventListener('mouseleave', () => {
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const toggle = dropdown.querySelector('.nav-link');
+      menu.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  </script>
+
+</body>
+</html>
+

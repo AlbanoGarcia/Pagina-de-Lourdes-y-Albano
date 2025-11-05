@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestoría - ISFT Nº191</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4ff;
+      color: #003366;
+      margin: 0;
+    }
+
+    a { text-decoration: none; }
+
+    /* Navbar */
+    .navbar-custom {
+      background: linear-gradient(90deg, #00509e, #ff8c42);
+      padding: 15px 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .navbar-brand h3 { color: #fff3e0; margin: 0; font-weight: 700; }
+    .navbar-brand span { color: #fff; font-size: 0.9rem; }
+    .nav-link { color: #fff !important; font-weight: 600; margin-left: 20px; }
+    .nav-link:hover { color: #ffd699 !important; }
+    .dropdown-menu { background-color: #00509e; border-radius: 10px; }
+    .dropdown-item { color: #fff; }
+    .dropdown-item:hover { background-color: #ff8c42; color: #003366; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #cce0ff, #e6f2ff);
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 1100px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hero h1 { color: #00509e; font-weight: 700; margin-bottom: 15px; }
+    .hero p { color: #003366; margin-bottom: 25px; font-size: 1.1rem; }
+
+    /* Contenido de carrera */
+    .career-content {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 40px 50px;
+      max-width: 1000px;
+      margin: 40px auto;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .career-content h2 {
+      color: #00509e;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .career-content p, .career-content li {
+      color: #003366;
+      line-height: 1.7;
+    }
+    .career-content ul {
+      list-style-type: square;
+      margin-left: 25px;
+      padding-left: 10px;
+    }
+
+    /* Botones */
+    .buttons-section {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .buttons-section a {
+      background-color: #00509e;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      margin: 10px;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .buttons-section a:hover { background-color: #ff8c42; color: #fff; }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 25px 50px;
+      border-radius: 10px 10px 0 0;
+    }
+    footer a { color: #ff8c42; margin: 0 5px; }
+    footer a:hover { color: #ffd699; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+ <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <a class="navbar-brand" href="index.html">
+    <h3>ISFT Nº191</h3>
+    <span>Nivel Terciario</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="ingresantes.html">Ingresantes</a></li>
+
+      <!-- Dropdown Carreras -->
+      <li class="nav-item dropdown" id="carrerasDropdown">
+        <a class="nav-link dropdown-toggle" href="course.html" id="navbarDropdown" role="button">Carreras</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="gestoria.html">Gestoría</a></li>
+          <li><a class="dropdown-item" href="software.html">Desarrollo de Software</a></li>
+          <li><a class="dropdown-item" href="aduana.html">Régimen Aduanero</a></li>
+          <li><a class="dropdown-item" href="administracion.html">Adm. Contable</a></li>
+          <li><a class="dropdown-item" href="logistica.html">Logística</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="event.html">Noticias</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+     <li class="nav-item"><a class="nav-link" href="https://isft191.edu.ar/campus/" target="_blank">Campus</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Tecnicatura Superior en Gestoría</h1>
+    <p>Conocé el perfil profesional, las principales tareas y las oportunidades laborales que ofrece esta carrera en el ISFT Nº191.</p>
+  </section>
+
+  <!-- Contenido -->
+  <section class="career-content">
+    <h2>Perfil profesional</h2>
+    <p>El/la Técnico/a Superior en Gestoría está capacitado/a para gestionar trámites legales, administrativos y laborales, brindar asesoramiento impositivo, y colaborar en la administración de empresas públicas y privadas.</p>
+
+    <h2>Principales tareas</h2>
+    <ul>
+      <li>Gestionar trámites legales y administrativos.</li>
+      <li>Asesorar en temas impositivos y laborales.</li>
+      <li>Representar a empresas ante organismos oficiales.</li>
+      <li>Organizar y coordinar documentación empresarial.</li>
+      <li>Colaborar en la planificación administrativa de organizaciones.</li>
+    </ul>
+
+    <h2>Requisitos para la inscripción</h2>
+    <ul>
+      <li>Título secundario completo o constancia en trámite.</li>
+      <li>DNI actualizado.</li>
+      <li>Completar formulario de preinscripción online.</li>
+      <li>Entrevista informativa con el equipo académico.</li>
+    </ul>
+
+    <h2>Oportunidades laborales</h2>
+    <ul>
+      <li>Empresas y consultoras de gestión administrativa.</li>
+      <li>Departamentos de recursos humanos y administración.</li>
+      <li>Organismos públicos y privados.</li>
+      <li>Asesorías impositivas y laborales.</li>
+      <li>Emprendimientos propios en gestión administrativa.</li>
+    </ul>
+      <h2>Folleto de la Carrera</h2>
+    <p> 
+    <a href="https://isft191.edu.ar/wp-content/uploads/2020/10/Plan-de-Estudio-Gestoría.pdf">Gestoria</a>.</p>
+  </section>
+
+  <!-- Botones -->
+  <div class="buttons-section">
+    <a href="ingresantes.html">Cómo inscribirme</a>
+    <a href="contact.html">Ir a Contacto</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ISFT Nº191 | Todos los derechos reservados</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  // Hace que el menú se abra al pasar el mouse
+  const dropdown = document.querySelector('#carrerasDropdown');
+
+  dropdown.addEventListener('mouseenter', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.add('show');
+    toggle.setAttribute('aria-expanded', 'true');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.remove('show');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+</script>
+
+</body>
+</html>

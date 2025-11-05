@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingresantes - ISFT Nº191</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4ff;
+      color: #003366;
+      margin: 0;
+    }
+
+    a { text-decoration: none; }
+
+    /* Navbar */
+    .navbar-custom {
+      background: linear-gradient(90deg, #00509e, #ff8c42);
+      padding: 15px 50px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .navbar-brand h3 { color: #fff3e0; margin: 0; font-weight: 700; }
+    .navbar-brand span { color: #fff; font-size: 0.9rem; }
+    .nav-link { color: #fff !important; font-weight: 600; margin-left: 20px; }
+    .nav-link:hover { color: #ffd699 !important; }
+    .dropdown-menu { background-color: #00509e; border-radius: 10px; }
+    .dropdown-item { color: #fff; }
+    .dropdown-item:hover { background-color: #ff8c42; color: #003366; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #cce0ff, #e6f2ff);
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 1100px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .hero h1 { color: #00509e; font-weight: 700; margin-bottom: 15px; }
+    .hero p { color: #003366; margin-bottom: 25px; font-size: 1.1rem; }
+
+    /* Formulario */
+    .ingresantes-form {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 40px auto;
+    }
+    .ingresantes-form h3 { color: #00509e; margin-bottom: 25px; text-align: center; }
+    .ingresantes-form input, .ingresantes-form select {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border: 1px solid #003366;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+    .ingresantes-form button {
+      background-color: #ff8c42;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .ingresantes-form button:hover { background-color: #e6732f; }
+
+    /* Requisitos */
+    .requisitos {
+      background: linear-gradient(135deg, #e6f2ff, #cce0ff);
+      padding: 50px 20px;
+      border-radius: 15px;
+      margin: 40px auto;
+      max-width: 1100px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .requisitos h3 { color: #00509e; margin-bottom: 20px; text-align: center; }
+    .requisitos ul { list-style-type: square; margin-left: 30px; }
+    .requisitos li { color: #003366; margin-bottom: 10px; }
+
+    /* Botones */
+    .buttons-section {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .buttons-section a {
+      background-color: #00509e;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 50px;
+      margin: 10px;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .buttons-section a:hover { background-color: #ff8c42; color: #fff; }
+
+    /* Footer */
+    footer {
+      background-color: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 25px 50px;
+      border-radius: 10px 10px 0 0;
+    }
+    footer a { color: #ff8c42; margin: 0 5px; }
+    footer a:hover { color: #ffd699; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <a class="navbar-brand" href="index.html">
+    <h3>ISFT Nº191</h3>
+    <span>Nivel Terciario</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ms-auto" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <li class="nav-item"><a class="nav-link" href="ingresantes.html">Ingresantes</a></li>
+
+      <!-- Dropdown Carreras -->
+      <li class="nav-item dropdown" id="carrerasDropdown">
+        <a class="nav-link dropdown-toggle" href="course.html" id="navbarDropdown" role="button">Carreras</a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="gestoria.html">Gestoría</a></li>
+          <li><a class="dropdown-item" href="software.html">Desarrollo de Software</a></li>
+          <li><a class="dropdown-item" href="aduana.html">Régimen Aduanero</a></li>
+          <li><a class="dropdown-item" href="administracion.html">Adm. Contable</a></li>
+          <li><a class="dropdown-item" href="logistica.html">Logística</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="event.html">Noticias</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+     <li class="nav-item"><a class="nav-link" href="https://isft191.edu.ar/campus/" target="_blank">Campus</a></li>
+
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Bienvenido/a al ISFT Nº191</h1>
+    <p>Si querés comenzar tu camino en la educación superior, te damos toda la información que necesitás para inscribirte y ser parte de nuestra comunidad.</p>
+  </section>
+
+
+  
+
+  <!-- Formulario de Ingreso -->
+ <section class="ingresantes-form">
+  <h3>Formulario para Ingresantes</h3>
+  <form enctype="multipart/form-data">
+    <input type="text" placeholder="Nombre" required>
+    <input type="text" placeholder="Apellido" required>
+    <input type="text" placeholder="DNI" required>
+    <input type="text" placeholder="Dirección" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="text" placeholder="Teléfono" required>
+
+    <select required>
+      <option value="">Seleccioná la carrera de tu interés</option>
+      <option value="software">Desarrollo de Software</option>
+      <option value="logistica">Logística</option>
+      <option value="gestoria">Gestoría</option>
+      <option value="aduanero">Régimen Aduanero</option>
+      <option value="contable">Administración Contable</option>
+    </select>
+
+    <!-- Campo para subir imagen -->
+    <label for="titulo">Subí una imagen del título secundario o constancia</label>
+    <input type="file" id="titulo" name="titulo" accept="image/*" required>
+
+     <label for="titulo">Fotos del DNI</label>
+    <input type="file" id="titulo" name="titulo" accept="image/*" required>
+
+    <div class="text-center">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</section>
+
+
+  <!-- Requisitos -->
+  <section class="requisitos">
+    <h3>Requisitos para Ingresar</h3>
+    <ul>
+      <li>Despues de haber completado el formulario de inscripción online. La institucion le va a enviar un correo electronico para saber si usted se inscribio correctamente,
+        despues de que le llegue el mail, debera traer:
+      </li>
+      2 fotos Carnet 4x4 y abonar la correspondiente cuota de la cooperadora
+      
+    </ul>
+  </section>
+
+  <!-- Botones -->
+  <div class="buttons-section">
+    <a href="course.html">Ver Carreras</a>
+    <a href="contact.html">Ir a Contacto</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ISFT Nº191 | Todos los derechos reservados</p>
+    <p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  document.querySelector('.nav-link.dropdown-toggle').addEventListener('click', function(e) {
+    window.location.href = 'course.html';
+  });
+</script>
+<script>
+  // Hace que el menú se abra al pasar el mouse
+  const dropdown = document.querySelector('#carrerasDropdown');
+
+  dropdown.addEventListener('mouseenter', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.add('show');
+    toggle.setAttribute('aria-expanded', 'true');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    const toggle = dropdown.querySelector('.nav-link');
+    menu.classList.remove('show');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+</script>
+
+</body>
+</html>
